@@ -2,12 +2,36 @@ package pizzabar;
 
 import java.util.*;
 
-public class Bestillinger {
-    ArrayList<Pizza> bestillingList;
+public class Bestilling {
+    private Customer customer;
+    private ArrayList<Pizza> pizzaer;
 
-    public Bestillinger(){
-        bestillingList = new ArrayList<>();
+    public Bestilling(Customer customer){
+        this.customer = customer;
+        pizzaer = new ArrayList<>();
 
     }
+
+    public boolean removePizza(Pizza pizza){
+        return pizzaer.remove(pizza);
+    }
+
+    public void addPizza(Pizza pizza){
+        pizzaer.add(pizza);
+    }
+
+    public double getTotalPris(){
+        double total = 0;
+
+        for (Pizza p : pizzaer){
+            total = total + p.getPris();
+        }
+        return total;
+    }
+
+
+
+
+
 
 }

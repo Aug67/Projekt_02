@@ -1,4 +1,12 @@
-package Pizzabar;
+package pizzabar;
 
-public class NormalCustomer {
+public class NormalCustomer extends Customer {
+
+    public NormalCustomer(){
+
+    }
+
+
+
+
 }
