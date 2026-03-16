@@ -1,4 +1,4 @@
-package Pizzabar;
+package pizzabar;
 
 public class NormalCustomer {
 }
