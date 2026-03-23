@@ -1,5 +1,6 @@
 package pizzabar;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main{
@@ -8,15 +9,49 @@ public class Main{
 
     Scanner scan = new Scanner(System.in);
 
-    scan.next();
+        System.out.println("\nVælg kundetype:");
+        System.out.println("\n1  Normal kunde");
+        System.out.println("2  VIP kunde");
+        System.out.println("3  Medarbejder kunde");
+            while (true) {
+                try {
+                    int valg = scan.nextInt();
+                    System.out.println("\nVælg kundetype:");
+                    System.out.println("\n1  Normal kunde");
+                    System.out.println("2  VIP kunde");
+                    System.out.println("3  Medarbejder kunde");
+
+                    Customer c;
+                    if (valg == 1) {
+                        c = new NormalCustomer();
+                    } else if (valg == 2) {
+                        c = new VIPCustomer();
+                    } else if (valg == 3) {
+                        c = new EmployeeCustomer();
+                    }
+                } catch (Exception e) {
+                    System.out.println("Skriv et tal imellem 1-3!");
+                }
+            }
+        }
+
+/*
+    if (valg == 1){
+        c = new NormalCustomer();
+    }  else if (valg == 2){
+        c = new VIPCustomer();
+    }  else if (valg == 3) {
+        c = new EmployeeCustomer();
+    }
+*/
             // Første bestilling
-        Customer c = new VIPCustomer();
-        Bestilling b = new Bestilling(c);
+        //Customer c = new VIPCustomer();
+       // Bestilling b = new Bestilling(c);
 
-        b.addPizza(new Pizza(1, "Margherita", 80));
-        b.addPizza(new Pizza(2, "Pepperoni", 90));
+       // b.addPizza(new Pizza(1, "Margherita", 80));
+       // b.addPizza(new Pizza(2, "Pepperoni", 90));
 
-            // Anden bestilling
+            /* Anden bestilling
         Customer c2 = new NormalCustomer();
         Bestilling b2 = new Bestilling(c2);
 
@@ -30,10 +65,10 @@ public class Main{
 
             // Print alle totalpriser
         for (Bestilling best : all.getListe()) {
-            System.out.println(best.getTotalPris());
+            System.out.println(best.getTotalPris());*/
             }
-        }
 
-    }
+
+
 
 
