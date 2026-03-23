@@ -32,9 +32,4 @@ public class Bestilling {
         return total * (1 - rabat);
     }
 
-
-
-
-
-
 }

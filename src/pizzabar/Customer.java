@@ -1,6 +1,6 @@
 package pizzabar;
 
-public class Customer {
+public abstract class Customer {
 
 
 
