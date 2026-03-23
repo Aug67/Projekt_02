@@ -26,7 +26,10 @@ public class Bestilling {
         for (Pizza p : pizzaer){
             total = total + p.getPris();
         }
-        return total;
+
+        double rabat = customer.getRabat();
+
+        return total * (1 - rabat);
     }
 
 
