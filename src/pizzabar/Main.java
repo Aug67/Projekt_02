@@ -30,6 +30,23 @@ int valg = 0;
             }
         }
 
+        Customer c;
+
+        if (valg == 1){
+            c = new NormalCustomer();
+        } else if (valg == 2){
+            c = new VIPCustomer();
+        } else {
+            c = new EmployeeCustomer();
+        }
+
+        Bestilling b = new Bestilling (c);
+
+        b.addPizza(new Pizza(1, "Margherita", 80));
+        b.addPizza(new Pizza(2, "Pepperoni", 90));
+
+        System.out.println("Bestilling totalpris: " + b.getTotalPris() + " kr");
+
     }
 
 
