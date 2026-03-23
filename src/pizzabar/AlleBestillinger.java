@@ -2,7 +2,7 @@ package pizzabar;
 
 import java.util.*;
 
-public class AlleBestillinger {
+public class  AlleBestillinger {
     private ArrayList<Bestilling> liste;
 
     public AlleBestillinger(){

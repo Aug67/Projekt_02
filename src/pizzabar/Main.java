@@ -1,10 +1,14 @@
 package pizzabar;
 
+import java.util.Scanner;
+
 public class Main{
 
     public static void main(String[] args){
 
+    Scanner scan = new Scanner(System.in);
 
+    scan.next();
             // Første bestilling
         Customer c = new VIPCustomer();
         Bestilling b = new Bestilling(c);
