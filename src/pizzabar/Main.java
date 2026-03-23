@@ -8,6 +8,7 @@ public class Main{
     public static void main(String[] args){
 
     Scanner scan = new Scanner(System.in);
+
 int valg = 0;
         System.out.println("\nVælg kundetype:");
         System.out.println("\n1  Normal kunde");
@@ -20,7 +21,7 @@ int valg = 0;
                 if (valg >= 1 && valg <= 3) {
                     break;
                 } else {
-                    System.out.println("Skriv et tal mellem. 1-3!");
+                    System.out.println("Skriv et tal mellem 1-3!");
                 }
 
             } catch (Exception e) {
