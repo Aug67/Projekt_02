@@ -50,6 +50,9 @@ int kundeValg = 0;
 
     }
 
+    int pizzaValg = 0;
+
+
 
    /* Customer c;
     if (valg == 1){
