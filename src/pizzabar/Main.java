@@ -56,7 +56,7 @@ public class Main {
         menu.addPizza(new Pizza(3, "Hawaii", 75));
         menu.addPizza(new Pizza(4, "pizza4", 90));
         menu.addPizza(new Pizza(5, "pizza5", 75));
-        String seOrdre = "tast 00 for at se ordre";
+        String seOrdre = "tast 100 for at se ordre";
 
 
         for (Pizza p : menu.getPizzaer()) {
@@ -84,16 +84,17 @@ public class Main {
                     break;
                 } else if (pizzaValg >= 1 && pizzaValg <= 5) {
                     fortsaetBestilling = true;
-                } else if (pizzaValg > 5) {
-                    System.out.println("Skriv et tal mellem 0-5!"); 
+                } else if (pizzaValg >= 5 && pizzaValg <= 99) {
+                    System.out.println("Skriv et tal mellem 0-5! Eller skriv 100");
                 }
                 scan.nextLine();
 
             } catch (Exception e) {
-                System.out.println("Skriv et tal mellem 0-5!");
+                System.out.println("Skriv et tal mellem 0-5! Eller skriv 100");
                 scan.nextLine();
             }
-//jeg prøvede at gøre så man kan skrive check og man så kan se hele ordren men hvis du skrivr andet end 1-5 kan du se bestillingen
+
+    //jeg prøvede at gøre så man kan skrive check og man så kan se hele ordren men hvis du skrivr andet end 1-5 kan du se bestillingen
            /*
             boolean check = true;
             while (check) {
@@ -112,6 +113,8 @@ public class Main {
             }
 
            */
+
+        // hvis du skriver 100 får du total beløb
 
              if (pizzaValg == 1) {
               System.out.println("\nDu har nu tilføjet:");
@@ -154,7 +157,7 @@ public class Main {
                          System.out.println(p);
                      }
                  }
-             }  else {
+             }  else if (pizzaValg == 100) {
 
 
                          System.out.println(b);
@@ -169,37 +172,7 @@ public class Main {
 
 
 
-   /* Customer c;
-    if (valg == 1){
-        c = new NormalCustomer();
-    }  else if (valg == 2){
-        c = new VIPCustomer();
-    }  else if (valg == 3) {
-        c = new EmployeeCustomer();
-    }
-*/
-        // Første bestilling
-        //Customer c = new VIPCustomer();
-        // Bestilling b = new Bestilling(c);
 
-        // b.addPizza(new Pizza(1, "Margherita", 80));
-        // b.addPizza(new Pizza(2, "Pepperoni", 90));
-
-            /* Anden bestilling
-        Customer c2 = new NormalCustomer();
-        Bestilling b2 = new Bestilling(c2);
-
-        b2.addPizza(new Pizza(3, "Hawaii", 85));
-
-            // Samling af alle bestillinger
-        AlleBestillinger all = new AlleBestillinger();
-
-        all.addBestilling(b);
-        all.addBestilling(b2);
-
-            // Print alle totalpriser
-        for (Bestilling best : all.getListe()) {
-            System.out.println(best.getTotalPris());*/
 
 
 
