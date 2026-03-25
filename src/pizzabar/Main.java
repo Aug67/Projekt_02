@@ -13,6 +13,9 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int kundeValg = 0;
+        String totalordre[] = {};
+
+
         System.out.println("\nVælg kundetype:");
         System.out.println("\n1  Normal kunde");
         System.out.println("2  VIP kunde");
@@ -44,13 +47,16 @@ public class Main {
         } else {
             c = new EmployeeCustomer();
         }
-
+        AlleBestillinger alle = new AlleBestillinger();
         Bestilling b = new Bestilling(c);
         Menu menu = new Menu();
 
         menu.addPizza(new Pizza(1, "Margherita", 80));
         menu.addPizza(new Pizza(2, "Pepperoni", 90));
         menu.addPizza(new Pizza(3, "Hawaii", 75));
+        menu.addPizza(new Pizza(4, "pizza4", 90));
+        menu.addPizza(new Pizza(5, "pizza5", 75));
+
 
         for (Pizza p : menu.getPizzaer()) {
         System.out.println(p);
@@ -86,13 +92,29 @@ public class Main {
 
              if (pizzaValg == 1) {
               System.out.println("PIZZA1");
+                 for (Pizza p : liste) {
+                     if (p.getNummer() == pizzaValg) {
+                         b.addPizza(p);
+                         System.out.println(p);
+                     }
+                 }
 
              }  else if (pizzaValg == 2) {
               System.out.println("PIZZA2");
-
+                 for (Pizza p : liste) {
+                     if (p.getNummer() == pizzaValg) {
+                         b.addPizza(p);
+                         System.out.println(p);
+                     }
+                 }
              }  else if (pizzaValg == 3) {
               System.out.println("PIZZA3");
-
+                 for (Pizza p : liste) {
+                     if (p.getNummer() == pizzaValg) {
+                         b.addPizza(p);
+                         System.out.println(p);
+                     }
+                 }
              }  else if (pizzaValg == 4) {
               System.out.println("PIZZA4");
 
@@ -106,9 +128,7 @@ public class Main {
 
         }
 
-               if (pizzaValg == 1) {
-                System.out.println("PIZZA1");
-               }
+
 
    /* Customer c;
     if (valg == 1){
