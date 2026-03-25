@@ -93,7 +93,9 @@ public class Main {
                 System.out.println("Skriv et tal mellem 0-5!");
                 scan.nextLine();
             }
-boolean check = true;
+//jeg prøvede at gøre så man kan skrive check og man så kan se hele ordren men hvis du skrivr andet end 1-5 kan du se bestillingen
+           /*
+            boolean check = true;
             while (check) {
                try {
                   totalordre = scan.nextLine();
@@ -108,8 +110,11 @@ boolean check = true;
 
                }
             }
+
+           */
+
              if (pizzaValg == 1) {
-              System.out.println("PIZZA1");
+              System.out.println("\nDu har nu tilføjet:");
                  for (Pizza p : liste) {
                      if (p.getNummer() == pizzaValg) {
                          b.addPizza(p);
@@ -118,7 +123,7 @@ boolean check = true;
                  }
 
              }  else if (pizzaValg == 2) {
-              System.out.println("PIZZA2");
+              System.out.println("\nDu har nu tilføjet:");
                  for (Pizza p : liste) {
                      if (p.getNummer() == pizzaValg) {
                          b.addPizza(p);
@@ -126,7 +131,7 @@ boolean check = true;
                      }
                  }
              }  else if (pizzaValg == 3) {
-              System.out.println("PIZZA3");
+              System.out.println("\nDu har nu tilføjet:");
                  for (Pizza p : liste) {
                      if (p.getNummer() == pizzaValg) {
                          b.addPizza(p);
@@ -134,7 +139,7 @@ boolean check = true;
                      }
                  }
              }  else if (pizzaValg == 4) {
-              System.out.println("PIZZA4");
+              System.out.println("\nDu har nu tilføjet:");
                  for (Pizza p : liste) {
                      if (p.getNummer() == pizzaValg) {
                          b.addPizza(p);
@@ -142,10 +147,16 @@ boolean check = true;
                      }
                  }
              }  else if (pizzaValg == 5) {
-              System.out.println("PIZZA5");
+              System.out.println("\nDu har nu tilføjet:");
                  for (Pizza p : liste) {
                      if (p.getNummer() == pizzaValg) {
                          b.addPizza(p);
+                         System.out.println(p);
+                     }
+                 }
+             }  else {
+
+
                          System.out.println(b);
                      }
                  }
@@ -189,8 +200,8 @@ boolean check = true;
             // Print alle totalpriser
         for (Bestilling best : all.getListe()) {
             System.out.println(best.getTotalPris());*/
-    }
-}
+
+
 
 
 
