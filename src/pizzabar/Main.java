@@ -13,7 +13,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int kundeValg = 0;
-        String totalordre[] = {};
+        String totalordre;
 
 
         System.out.println("\nVælg kundetype:");
@@ -56,12 +56,16 @@ public class Main {
         menu.addPizza(new Pizza(3, "Hawaii", 75));
         menu.addPizza(new Pizza(4, "pizza4", 90));
         menu.addPizza(new Pizza(5, "pizza5", 75));
+        String seOrdre = "tast 00 for at se ordre";
 
 
         for (Pizza p : menu.getPizzaer()) {
         System.out.println(p);
+
         }
-        System.out.println("Bestilling totalpris: " + b.getTotalPris() + " kr");
+        System.out.println(seOrdre);
+        System.out.println("\nBestilling totalpris: " + b.getTotalPris() + " kr");
+
         scan.nextLine();
 
         ArrayList<Pizza> liste = menu.getPizzaer();
@@ -89,7 +93,21 @@ public class Main {
                 System.out.println("Skriv et tal mellem 0-5!");
                 scan.nextLine();
             }
+boolean check = true;
+            while (check) {
+               try {
+                  totalordre = scan.nextLine();
+                   if (totalordre.equals("check")) {
 
+                       System.out.println(b);
+                   break;
+                   }
+
+               } catch (Exception e) {
+                   break;
+
+               }
+            }
              if (pizzaValg == 1) {
               System.out.println("PIZZA1");
                  for (Pizza p : liste) {
@@ -128,7 +146,7 @@ public class Main {
                  for (Pizza p : liste) {
                      if (p.getNummer() == pizzaValg) {
                          b.addPizza(p);
-                         System.out.println(p);
+                         System.out.println(b);
                      }
                  }
              }
