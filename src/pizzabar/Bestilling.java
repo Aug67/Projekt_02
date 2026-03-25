@@ -6,6 +6,18 @@ public class Bestilling {
     private Customer customer;
     private ArrayList<Pizza> pizzaer;
 
+    @Override
+    public String toString() {
+        String tekst = "Bestilling:\n";
+
+        for (Pizza p : pizzaer) {
+            tekst += p + "\n";
+        }
+
+        tekst += "Totalpris: " + getTotalPris() + " kr";
+
+        return tekst;
+    }
     public Bestilling(Customer customer){
         this.customer = customer;
         pizzaer = new ArrayList<>();

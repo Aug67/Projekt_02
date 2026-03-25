@@ -117,10 +117,20 @@ public class Main {
                  }
              }  else if (pizzaValg == 4) {
               System.out.println("PIZZA4");
-
+                 for (Pizza p : liste) {
+                     if (p.getNummer() == pizzaValg) {
+                         b.addPizza(p);
+                         System.out.println(p);
+                     }
+                 }
              }  else if (pizzaValg == 5) {
               System.out.println("PIZZA5");
-
+                 for (Pizza p : liste) {
+                     if (p.getNummer() == pizzaValg) {
+                         b.addPizza(p);
+                         System.out.println(p);
+                     }
+                 }
              }
 
 
