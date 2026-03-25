@@ -50,16 +50,15 @@ public class Main {
 
         menu.addPizza(new Pizza(1, "Margherita", 80));
         menu.addPizza(new Pizza(2, "Pepperoni", 90));
+        menu.addPizza(new Pizza(3, "Hawaii", 75));
 
+        for (Pizza p : menu.getPizzaer()) {
+        System.out.println(p);
+        }
         System.out.println("Bestilling totalpris: " + b.getTotalPris() + " kr");
         scan.nextLine();
 
         ArrayList<Pizza> liste = menu.getPizzaer();
-
-        for (Pizza p : liste) {
-            System.out.println(p);
-        }
-
 
         int pizzaValg = 0;
 
@@ -71,9 +70,13 @@ public class Main {
                 pizzaValg = scan.nextInt();
                 if (pizzaValg == 0) {
                     fortsaetBestilling = false;
+
                     break;
                 } else if (pizzaValg >= 1 && pizzaValg <= 5) {
+                    System.out.println("PIZZA1");
                     fortsaetBestilling = true;
+                } else if (pizzaValg > 5) {
+                    System.out.println("Skriv et tal mellem 0-5!"); 
                 }
                 scan.nextLine();
 
@@ -83,6 +86,9 @@ public class Main {
             }
         }
 
+               if (pizzaValg == 1) {
+                System.out.println("PIZZA1");
+               }
 
    /* Customer c;
     if (valg == 1){
