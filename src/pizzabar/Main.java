@@ -73,7 +73,6 @@ public class Main {
 
                     break;
                 } else if (pizzaValg >= 1 && pizzaValg <= 5) {
-                    System.out.println("PIZZA1");
                     fortsaetBestilling = true;
                 } else if (pizzaValg > 5) {
                     System.out.println("Skriv et tal mellem 0-5!"); 
@@ -84,6 +83,27 @@ public class Main {
                 System.out.println("Skriv et tal mellem 0-5!");
                 scan.nextLine();
             }
+
+             if (pizzaValg == 1) {
+              System.out.println("PIZZA1");
+
+             }  else if (pizzaValg == 2) {
+              System.out.println("PIZZA2");
+
+             }  else if (pizzaValg == 3) {
+              System.out.println("PIZZA3");
+
+             }  else if (pizzaValg == 4) {
+              System.out.println("PIZZA4");
+
+             }  else if (pizzaValg == 5) {
+              System.out.println("PIZZA5");
+
+             }
+
+
+
+
         }
 
                if (pizzaValg == 1) {
