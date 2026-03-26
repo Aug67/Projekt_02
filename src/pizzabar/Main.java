@@ -13,13 +13,13 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int kundeValg = 0;
-        String totalordre;
+
 
 
         System.out.println("\nVælg kundetype:");
         System.out.println("\n1  Normal kunde");
         System.out.println("2  VIP kunde");
-        System.out.println("3  Medarbejder kunde");
+        System.out.println("3  Medarbejder kunde\n");
 
 
         while (true) {
@@ -60,7 +60,7 @@ public class Main {
 
 
         for (Pizza p : menu.getPizzaer()) {
-        System.out.println(p);
+            System.out.println(p);
 
         }
         System.out.println(seOrdre);
@@ -78,105 +78,87 @@ public class Main {
             try {
 
                 pizzaValg = scan.nextInt();
-                if (pizzaValg == 0) {
-                    fortsaetBestilling = false;
 
-                    break;
-                } else if (pizzaValg >= 1 && pizzaValg <= 5) {
-                    fortsaetBestilling = true;
-                } else if (pizzaValg >= 5 && pizzaValg <= 99) {
-                    System.out.println("Skriv et tal mellem 0-5! Eller skriv 100");
+
+                for (Pizza p : liste) {
+                    if (pizzaValg >= 1 && pizzaValg <= 5) {
+                        fortsaetBestilling = true;
+                    } else if (pizzaValg >= 6 && pizzaValg <= 99) {
+                        System.out.println("Skriv et tal mellem 0-5!\nEller skriv 100 for hele ordren\n");
+break;
+                    }
+
+
                 }
-                scan.nextLine();
 
-            } catch (Exception e) {
-                System.out.println("Skriv et tal mellem 0-5! Eller skriv 100");
+            } catch(Exception e){
+                System.out.println("Skriv et tal mellem 0-5!\nEller skriv 100 for hele ordren\n");
                 scan.nextLine();
             }
 
-    //jeg prøvede at gøre så man kan skrive check og man så kan se hele ordren men hvis du skrivr andet end 1-5 kan du se bestillingen
-           /*
-            boolean check = true;
-            while (check) {
-               try {
-                  totalordre = scan.nextLine();
-                   if (totalordre.equals("check")) {
 
-                       System.out.println(b);
-                   break;
-                   }
 
-               } catch (Exception e) {
-                   break;
+            // hvis du skriver 100 får du total beløb
 
-               }
+            if (pizzaValg == 1) {
+                fortsaetBestilling = true;
+                System.out.println("Du har nu tilføjet:");
+                for (Pizza p : liste) {
+                    if (p.getNummer() == pizzaValg) {
+                        b.addPizza(p);
+                        System.out.println(p);
+                        System.out.println(b.getTotalPris() +"kr\n");
+                    }
+                }
+
+            } else if (pizzaValg == 2) {
+                fortsaetBestilling = true;
+                System.out.println("Du har nu tilføjet:");
+                for (Pizza p : liste) {
+                    if (p.getNummer() == pizzaValg) {
+                        b.addPizza(p);
+                        System.out.println(p +"\n");
+                    }
+                }
+            } else if (pizzaValg == 3) {
+
+                System.out.println("Du har nu tilføjet:");
+                for (Pizza p : liste) {
+                    if (p.getNummer() == pizzaValg) {
+                        b.addPizza(p);
+                        System.out.println(p +"\n");
+                    }
+                }
+            } else if (pizzaValg == 4) {
+
+                System.out.println("Du har nu tilføjet:");
+                for (Pizza p : liste) {
+                    if (p.getNummer() == pizzaValg) {
+                        b.addPizza(p);
+                        System.out.println(p +"\n");
+                    }
+                }
+            } else if (pizzaValg == 5) {
+                fortsaetBestilling = true;
+                System.out.println("Du har nu tilføjet:");
+                for (Pizza p : liste) {
+                    if (p.getNummer() == pizzaValg) {
+                        b.addPizza(p);
+                        System.out.println(p +"\n");
+                    }
+                }
+            } else if (pizzaValg == 100) {
+
+                fortsaetBestilling = true;
+                System.out.println(b +"\n");
+            } else if (pizzaValg == 0) {
+
+                fortsaetBestilling = false;
+                System.out.println(b);
             }
-
-           */
-
-        // hvis du skriver 100 får du total beløb
-
-             if (pizzaValg == 1) {
-              System.out.println("\nDu har nu tilføjet:");
-                 for (Pizza p : liste) {
-                     if (p.getNummer() == pizzaValg) {
-                         b.addPizza(p);
-                         System.out.println(p);
-                     }
-                 }
-
-             }  else if (pizzaValg == 2) {
-              System.out.println("\nDu har nu tilføjet:");
-                 for (Pizza p : liste) {
-                     if (p.getNummer() == pizzaValg) {
-                         b.addPizza(p);
-                         System.out.println(p);
-                     }
-                 }
-             }  else if (pizzaValg == 3) {
-              System.out.println("\nDu har nu tilføjet:");
-                 for (Pizza p : liste) {
-                     if (p.getNummer() == pizzaValg) {
-                         b.addPizza(p);
-                         System.out.println(p);
-                     }
-                 }
-             }  else if (pizzaValg == 4) {
-              System.out.println("\nDu har nu tilføjet:");
-                 for (Pizza p : liste) {
-                     if (p.getNummer() == pizzaValg) {
-                         b.addPizza(p);
-                         System.out.println(p);
-                     }
-                 }
-             }  else if (pizzaValg == 5) {
-              System.out.println("\nDu har nu tilføjet:");
-                 for (Pizza p : liste) {
-                     if (p.getNummer() == pizzaValg) {
-                         b.addPizza(p);
-                         System.out.println(p);
-                     }
-                 }
-             }  else if (pizzaValg == 100) {
-
-
-                         System.out.println(b);
-                     }
-                 }
-             }
-
-
 
 
         }
-
-
-
-
-
-
-
-
-
-
+            }
+        }
 

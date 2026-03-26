@@ -5,6 +5,7 @@ import java.util.*;
 public class Bestilling {
     private Customer customer;
     private ArrayList<Pizza> pizzaer;
+    private ArrayList<String> kommentarer;
 
     @Override
     public String toString() {
@@ -30,6 +31,14 @@ public class Bestilling {
 
     public void addPizza(Pizza pizza){
         pizzaer.add(pizza);
+    }
+
+    public void addKommentar(String kommentar) {
+        kommentarer.add(kommentar);
+    }
+
+    public ArrayList<String> getKommentarer() {
+        return kommentarer;
     }
 
     public double getTotalPris(){

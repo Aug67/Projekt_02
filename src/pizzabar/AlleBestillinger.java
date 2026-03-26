@@ -14,8 +14,16 @@ public class  AlleBestillinger {
         liste.add(b);
     }
 
+    public void addKommentar(Bestilling k){
+        liste.add(k);
+    }
+
+
+
     public ArrayList<Bestilling> getListe(){
         return liste;
     }
+
+
 
 }
