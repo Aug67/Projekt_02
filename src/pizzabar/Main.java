@@ -13,8 +13,8 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int kundeValg = 0;
-
-
+        String kommentar;
+        String kommentarslut;
 
         System.out.println("\nVælg kundetype:");
         System.out.println("\n1  Normal kunde");
@@ -83,19 +83,19 @@ public class Main {
                 for (Pizza p : liste) {
                     if (pizzaValg >= 1 && pizzaValg <= 5) {
                         fortsaetBestilling = true;
+
                     } else if (pizzaValg >= 6 && pizzaValg <= 99) {
                         System.out.println("Skriv et tal mellem 0-5!\nEller skriv 100 for hele ordren\n");
-break;
+                        break;
                     }
 
 
                 }
 
-            } catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("Skriv et tal mellem 0-5!\nEller skriv 100 for hele ordren\n");
                 scan.nextLine();
             }
-
 
 
             // hvis du skriver 100 får du total beløb
@@ -107,7 +107,7 @@ break;
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
                         System.out.println(p);
-                        System.out.println(b.getTotalPris() +"kr\n");
+                        System.out.println(b.getTotalPris() + "kr\n");
                     }
                 }
 
@@ -118,7 +118,7 @@ break;
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
                         System.out.println(p);
-                        System.out.println(b.getTotalPris() +"kr\n");
+                        System.out.println(b.getTotalPris() + "kr\n");
                     }
                 }
             } else if (pizzaValg == 3) {
@@ -128,7 +128,7 @@ break;
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
                         System.out.println(p);
-                        System.out.println(b.getTotalPris() +"kr\n");
+                        System.out.println(b.getTotalPris() + "kr\n");
                     }
                 }
             } else if (pizzaValg == 4) {
@@ -138,7 +138,7 @@ break;
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
                         System.out.println(p);
-                        System.out.println(b.getTotalPris() +"kr\n");
+                        System.out.println(b.getTotalPris() + "kr\n");
                     }
                 }
             } else if (pizzaValg == 5) {
@@ -148,21 +148,46 @@ break;
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
                         System.out.println(p);
-                        System.out.println(b.getTotalPris() +"kr\n");
+                        System.out.println(b.getTotalPris() + "kr\n");
                     }
                 }
             } else if (pizzaValg == 100) {
 
                 fortsaetBestilling = true;
-                System.out.println(b +"\n");
+                System.out.println(b + "\n");
+
             } else if (pizzaValg == 0) {
 
                 fortsaetBestilling = false;
-                System.out.println(b);
+
+                while (true) {
+                    System.out.println("Skriv kommentar (skriv 'done' for at stoppe):");
+
+                    kommentarslut = scan.nextLine();
+                    kommentar = scan.nextLine();
+
+
+                    if (kommentarslut.equalsIgnoreCase("done")) {
+                        System.out.println(kommentar);
+                        fortsaetBestilling = false;
+                        break;
+                    }
+                    else {
+
+                        System.out.println(b + "\n" + "din kommentar:" + kommentar);
+                        kommentar = scan.nextLine();
+                    }
+                    }
+
+                }
             }
 
 
+
+
+
+
         }
-            }
-        }
+    }
+
 
