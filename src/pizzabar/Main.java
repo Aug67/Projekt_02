@@ -64,7 +64,7 @@ public class Main {
 
         }
         System.out.println(seOrdre);
-        System.out.println("\nBestilling totalpris: " + b.getTotalPris() + " kr");
+        System.out.println("____________________________\n" + "Bestilling totalpris: " + b.getTotalPris() + " kr");
 
         scan.nextLine();
 
@@ -117,7 +117,8 @@ break;
                 for (Pizza p : liste) {
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
-                        System.out.println(p +"\n");
+                        System.out.println(p);
+                        System.out.println(b.getTotalPris() +"kr\n");
                     }
                 }
             } else if (pizzaValg == 3) {
@@ -126,7 +127,8 @@ break;
                 for (Pizza p : liste) {
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
-                        System.out.println(p +"\n");
+                        System.out.println(p);
+                        System.out.println(b.getTotalPris() +"kr\n");
                     }
                 }
             } else if (pizzaValg == 4) {
@@ -135,7 +137,8 @@ break;
                 for (Pizza p : liste) {
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
-                        System.out.println(p +"\n");
+                        System.out.println(p);
+                        System.out.println(b.getTotalPris() +"kr\n");
                     }
                 }
             } else if (pizzaValg == 5) {
@@ -144,7 +147,8 @@ break;
                 for (Pizza p : liste) {
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
-                        System.out.println(p +"\n");
+                        System.out.println(p);
+                        System.out.println(b.getTotalPris() +"kr\n");
                     }
                 }
             } else if (pizzaValg == 100) {
