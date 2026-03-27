@@ -13,7 +13,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int kundeValg = 0;
-        String kommentar;
+
         String kommentarslut;
 
         System.out.println("\nVælg kundetype:");
@@ -102,7 +102,7 @@ public class Main {
 
             if (pizzaValg == 1) {
                 fortsaetBestilling = true;
-                System.out.println("Du har nu tilføjet:");
+                System.out.println("Skriv 0 for at afslutte\nDu har nu tilføjet:");
                 for (Pizza p : liste) {
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
@@ -113,7 +113,7 @@ public class Main {
 
             } else if (pizzaValg == 2) {
                 fortsaetBestilling = true;
-                System.out.println("Du har nu tilføjet:");
+                System.out.println("Skriv 0 for at afslutte\nDu har nu tilføjet:");
                 for (Pizza p : liste) {
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
@@ -123,7 +123,7 @@ public class Main {
                 }
             } else if (pizzaValg == 3) {
 
-                System.out.println("Du har nu tilføjet:");
+                System.out.println("Skriv 0 for at afslutte\nDu har nu tilføjet:");
                 for (Pizza p : liste) {
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
@@ -133,7 +133,7 @@ public class Main {
                 }
             } else if (pizzaValg == 4) {
 
-                System.out.println("Du har nu tilføjet:");
+                System.out.println("Skriv 0 for at afslutte\nDu har nu tilføjet:");
                 for (Pizza p : liste) {
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
@@ -143,7 +143,7 @@ public class Main {
                 }
             } else if (pizzaValg == 5) {
                 fortsaetBestilling = true;
-                System.out.println("Du har nu tilføjet:");
+                System.out.println("Skriv 0 for at afslutte\nDu har nu tilføjet:");
                 for (Pizza p : liste) {
                     if (p.getNummer() == pizzaValg) {
                         b.addPizza(p);
@@ -159,23 +159,20 @@ public class Main {
             } else if (pizzaValg == 0) {
 
                 fortsaetBestilling = false;
+                scan.nextLine();
 
                 while (true) {
                     System.out.println("Skriv kommentar (skriv 'done' for at stoppe):");
+                    String kommentar = scan.nextLine();
 
-                    kommentarslut = scan.nextLine();
-                    kommentar = scan.nextLine();
+                        if (kommentar.equalsIgnoreCase("done")) {
+                            System.out.println("\n=== DIN BESTILLING ===");
+                            System.out.println(b);
+                            break;
+                        }
 
 
-                    if (kommentarslut.equalsIgnoreCase("done")) {
-                        System.out.println(kommentar);
-                        fortsaetBestilling = false;
-                        break;
-                    }
-                    else {
-
-                        System.out.println(b + "\n" + "din kommentar:" + kommentar);
-                        kommentar = scan.nextLine();
+                        b.addKommentar(kommentar);
                     }
                     }
 
@@ -188,6 +185,6 @@ public class Main {
 
 
         }
-    }
+
 
 

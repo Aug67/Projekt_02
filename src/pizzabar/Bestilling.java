@@ -7,12 +7,19 @@ public class Bestilling {
     private ArrayList<Pizza> pizzaer;
     private ArrayList<String> kommentarer;
 
+
     @Override
     public String toString() {
         String tekst = "Bestilling:\n";
 
         for (Pizza p : pizzaer) {
             tekst += p + "\n";
+        }
+        if (!kommentarer.isEmpty()) {
+            tekst += "Kommentarer:\n";
+            for (String kommentar : kommentarer) {
+                tekst += "- " + kommentar + "\n";
+            }
         }
 
         tekst += "Totalpris: " + getTotalPris() + " kr";
@@ -22,7 +29,7 @@ public class Bestilling {
     public Bestilling(Customer customer){
         this.customer = customer;
         pizzaer = new ArrayList<>();
-
+        kommentarer = new ArrayList<>();
     }
 
     public boolean removePizza(Pizza pizza){
