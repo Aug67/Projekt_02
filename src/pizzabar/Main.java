@@ -56,7 +56,7 @@ public class Main {
         menu.addPizza(new Pizza(3, "Hawaii", 75));
         menu.addPizza(new Pizza(4, "pizza4", 90));
         menu.addPizza(new Pizza(5, "pizza5", 75));
-        String seOrdre = "tast 100 for at se ordre";
+        String seOrdre = "tast 100 for at se ordre\n";
 
 
         for (Pizza p : menu.getPizzaer()) {
@@ -64,7 +64,7 @@ public class Main {
 
         }
         System.out.println(seOrdre);
-        System.out.println("____________________________\n" + "Bestilling totalpris: " + b.getTotalPris() + " kr");
+
 
         scan.nextLine();
 
