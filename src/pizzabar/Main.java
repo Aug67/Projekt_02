@@ -160,7 +160,7 @@ public class Main {
 
                 fortsaetBestilling = false;
                 scan.nextLine();
-
+//navn og kommentarer
                 while (true) {
                     System.out.println("Skriv kommentar (skriv 'done' for at stoppe):");
                     String kommentar = scan.nextLine();
