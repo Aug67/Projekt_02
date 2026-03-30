@@ -51,11 +51,11 @@ public class Main {
         Bestilling b = new Bestilling(c);
         Menu menu = new Menu();
 
-        menu.addPizza(new Pizza(1, "Margherita", 80));
+        menu.addPizza(new Pizza(1, "Margherita", 70));
         menu.addPizza(new Pizza(2, "Pepperoni", 90));
-        menu.addPizza(new Pizza(3, "Hawaii", 75));
-        menu.addPizza(new Pizza(4, "pizza4", 90));
-        menu.addPizza(new Pizza(5, "pizza5", 75));
+        menu.addPizza(new Pizza(3, "Hawaii", 80));
+        menu.addPizza(new Pizza(4, "Kylling BBQ", 100));
+        menu.addPizza(new Pizza(5, "Chesse lovers", 75));
         String seOrdre = "tast 100 for at se ordre\n";
 
 
